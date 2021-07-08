@@ -1,0 +1,8 @@
+Answer :
+      listsAreEqual() method in EmployeeInfo class is calling a method List.contains(employeeObj) which calls
+      a method equals from Object super class which is not overridden in Employee class.
+      To override equals method in sub class, an object of Object class should be sent as parameter not
+      Employee object as parameter.
+      If we do not override equals method in Employee class, equals method only looks for the reference of both
+      objects in heap memory and finds different references of objects which gives false.
+      If we override equals method of Object class in Employee correctly as in my implementation, it works.
